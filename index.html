@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>De que vuelan, vuelan</title>
 </head>
 <body>
     <nav class="navbar" id="navbar">
-        <a href="#">
-            <img src="./assets/logo-amarillo.png" alt="logo" loading="lazy">
-        </a>
-        <a href="#podcast">El Podcast</a>
-        <a href="#episodios"> Episodios</a>
-        <a href="#integrantes">Integrantes</a>
-        <a href="#contacto">Contacto</a>
+        <div class="navbar-container">
+            <a href="#">
+                <img class="logo-amarillo" src="./assets/logo-amarillo.png" alt="logo" loading="lazy">
+            </a>
+            <img src="./assets/banner-blanco.png" alt="banner">
+            <div class="link">
+                <a href="#podcast">El Podcast</a>
+                <a href="#episodios"> Episodios</a>
+                <a href="#integrantes">Integrantes</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
     </nav>
 
     <div class="welcome" id="welcome">
@@ -78,7 +83,58 @@
     </section>
 
     <section class="contacto">
+        <h2>Quieres sugerir algun tema? <br> <span>Contactanos!</span></h2>
+        <div class="formulario-contacto-contenedor">
 
+            <div class="formulario-contacto">
+                <form action="https://formspree.io/f/mjvqdjzk" method="POST">
+                <div class="control-formulario">
+                    <label for="name">Nombre</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="sender-name"
+                        placeholder="Escriba su nombre"
+                        class="input-field"
+                        required
+                    />
+                </div>
+
+                <div class="control-formulario">
+                    <label for="email">Correo Electrónico</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="sender-email"
+                        placeholder="Ingreso tu correo electrónico"
+                        class="input-field"
+                        required
+                    />
+                </div>
+
+                <div class="control-formulario">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea
+                        id="mensaje"
+                        cols="60"
+                        rows="10"
+                        placeholder="Escribe tu mensaje"
+                        name="mensaje"
+                        class="input-field"
+                        required
+                    >
+                    </textarea>
+                </div>
+
+                <input
+                    type="submit"
+                    value="Enviar"
+                    id="submit-btn"
+                    class="submit-btn"
+                />
+                </form>
+            </div>
+        </div>
     </section>
 
     <footer class="footer">

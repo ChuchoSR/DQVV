@@ -1,0 +1,26 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  margin: 20px 50px 20px 50px;
+}
+.navbar .logo-amarillo {
+  width: 80px;
+}
+.navbar img:nth-child(2) {
+  height: 66px;
+  width: 344px;
+}
+.navbar .navbar-container {
+  display: flex;
+}
+.navbar .navbar-container .link {
+  gap: 10px;
+}/*# sourceMappingURL=style.css.map */
