@@ -1,7 +1,15 @@
+@font-face {
+  font-family: "myFont";
+  src: url(./assets/futur.ttf);
+}
+@font-face {
+  font-family: "myFont2";
+  src: url(./assets/fonts/unicode.futurab.ttf);
+}
 body {
   padding: 0;
   margin: 0;
-  background-color: black;
+  background-color: #1f2a56;
 }
 
 a {
@@ -20,7 +28,12 @@ a {
 }
 .navbar .navbar-container {
   display: flex;
+  justify-content: space-evenly;
 }
 .navbar .navbar-container .link {
   gap: 10px;
+}
+.navbar .navbar-container .link a {
+  color: aliceblue;
+  font-family: "myFont2";
 }/*# sourceMappingURL=style.css.map */
