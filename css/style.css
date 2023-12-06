@@ -1,15 +1,24 @@
-@font-face {
-  font-family: "myFont";
-  src: url(./assets/futur.ttf);
-}
+/* @font-face{
+    font-family: 'myFont';
+    src: url('./assets/fonts/futur.ttf');
+} */
 @font-face {
   font-family: "myFont2";
-  src: url(./assets/fonts/unicode.futurab.ttf);
+  src: url("./assets/fonts/unicode.futurab.ttf");
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 body {
   padding: 0;
   margin: 0;
-  background-color: #1f2a56;
+  /* background-color: #1f2a56; */
+  background-color: black;
 }
 
 a {
@@ -25,6 +34,7 @@ a {
 .navbar img:nth-child(2) {
   height: 66px;
   width: 344px;
+  padding-left: 150px;
 }
 .navbar .navbar-container {
   display: flex;
@@ -32,8 +42,94 @@ a {
 }
 .navbar .navbar-container .link {
   gap: 10px;
+  margin-top: 12px;
+  display: flex;
 }
 .navbar .navbar-container .link a {
-  color: aliceblue;
+  color: rgb(241, 230, 0);
   font-family: "myFont2";
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #B0A4A4;
+}
+.welcome img {
+  animation: fadeIn 8s ease-out;
+}
+.welcome h1 {
+  position: absolute;
+  bottom: 80px;
+  animation: fadeIn 4s ease-out;
+  text-shadow: 1px 1px 1px rgba(128, 128, 126, 0.6039215686);
+  color: rgba(237, 229, 0, 0.6039215686);
+  font-family: "myFont2";
+}
+.welcome h2 {
+  bottom: 46px;
+  position: absolute;
+  animation: fadeIn 4s ease-out;
+  text-shadow: 1px 1px 1px rgba(128, 128, 126, 0.6039215686);
+  color: rgba(237, 229, 0, 0.6039215686);
+}
+.welcome p {
+  text-align: center;
+  font-size: larger;
+  position: absolute;
+  bottom: -10px;
+  animation: fadeIn 4s ease-out;
+  text-shadow: 1px 1px 1px rgba(128, 128, 126, 0.6039215686);
+  color: rgba(237, 229, 0, 0.6039215686);
+}
+
+.podcast h2 {
+  text-align: center;
+  color: #ff6347;
+  animation: fadeIn 4s ease-out;
+}
+.podcast .logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+}
+.podcast .logos p {
+  font-size: 25px;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 1px rgba(128, 128, 126, 0.6039215686);
+  color: rgba(237, 229, 0, 0.6039215686);
+  animation: fadeIn 4s ease-out;
+}
+.podcast .logos .white-logo {
+  height: 150px;
+}
+.podcast .right {
+  transform: scaleX(-1);
+}
+
+.integrantes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.integrantes .integrante-card {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+}
+.integrantes .integrante-card .photo {
+  height: 370px;
+  width: 300px;
+  filter: grayscale(100%);
+  border: solid 2px #B0A4A4;
+  border-radius: 20px;
+}
+.integrantes .integrante-card .photo img {
+  object-fit: fill;
 }/*# sourceMappingURL=style.css.map */
