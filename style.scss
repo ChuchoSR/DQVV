@@ -1,11 +1,16 @@
-/* @font-face{
+@font-face{
     font-family: 'myFont';
-    src: url('./assets/fonts/futur.ttf');
-} */
+    src: url('/assets/fonts/futur.ttf');
+}
 
 @font-face {
     font-family: 'myFont2';
-    src: url('./assets/fonts/unicode.futurab.ttf');
+    src: url('/assets/fonts/unicode.futurab.ttf');
+}
+
+@font-face {
+    font-family: 'titulo';
+    src: url('/assets/fonts/MailartRubberstamp-Regular.otf');
 }
 
 
@@ -21,8 +26,10 @@
 body{
     padding: 0;
     margin: 0;
-    /* background-color: #1f2a56; */
-    background-color: black;
+    background-color: #1f2a56;
+    /* background-color: black; */
+    margin-right: 80px;
+    margin-left: 80px;
 }
 a{
     text-decoration: none;
@@ -41,7 +48,7 @@ a{
     }
     .navbar-container{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         .link{
             gap: 10px;
             margin-top: 12px;
@@ -55,6 +62,17 @@ a{
     }
 }
 
+.titulo{
+    font-family: 'titulo';
+    
+}
+
+.dqvv{
+    color: #ff6347;
+    animation: fadeIn 8s ease-out;
+}
+
+
 .welcome{
     display: flex;
     flex-direction: column;
@@ -62,7 +80,7 @@ a{
     align-items: center;
     color: #B0A4A4;
     img{
-        animation: fadeIn 8s ease-out;
+        animation: fadeIn 4s ease-out;
     }
     
     h1{
@@ -71,7 +89,7 @@ a{
         animation: fadeIn 4s ease-out;
         text-shadow: 1px 1px 1px #80807e9a;
         color: #ede5009a;
-        font-family: 'myFont2';
+        
     }
     h2{
         bottom: 46px;
@@ -124,21 +142,83 @@ a{
     }
 }
 
+.episodios{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    h3{
+        color: #ede5009a;
+    }
+    .episodios-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+        grid-template-rows: repeat(2, 1fr);    /* 2 filas de igual tamaño */
+        gap: 30px;
+        /* align-items: center; */
+        /* justify-items: center; */
+        /* align-content: center */;
+        place-content: center;
+        .left-container{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            border: solid 3px #ede5009a;
+            border-radius: 20px;
+            width: 500px;
+            text-align: center;
+            p{
+                color: white;
+                /* font-family: 'myFont2'; */
+                font-size: 22px;
+                text-shadow: 1px 1px 1px #80807e9a;
+                padding-right: 10px;
+                padding-left: 10px;
+
+            }
+            .titulo-episodio{
+                color: #f2e700;
+            }
+        }
+        .right-container{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            img{
+                border-radius: 20px;
+            }
+    }
+}
+
+}
 .integrantes {
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
     .integrante-card{
         display: flex;
         flex-direction: row;
-        gap: 30px;
+        gap: 60px;
         justify-content: center;
+        .integrante{
+            border: solid 3px #f2e700;
+            border-radius: 20px;
+            .data{
+                display: flex;
+                width: 100%;
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
         .photo{
             height: 370px;
             width: 300px;
             filter: grayscale(100%);
-            border: solid 2px #B0A4A4;
-            border-radius: 20px;
+            
+            
             img{
                 object-fit: fill;
                 

@@ -1,10 +1,15 @@
-/* @font-face{
-    font-family: 'myFont';
-    src: url('./assets/fonts/futur.ttf');
-} */
+@charset "UTF-8";
+@font-face {
+  font-family: "myFont";
+  src: url("/assets/fonts/futur.ttf");
+}
 @font-face {
   font-family: "myFont2";
-  src: url("./assets/fonts/unicode.futurab.ttf");
+  src: url("/assets/fonts/unicode.futurab.ttf");
+}
+@font-face {
+  font-family: "titulo";
+  src: url("/assets/fonts/MailartRubberstamp-Regular.otf");
 }
 @keyframes fadeIn {
   from {
@@ -17,8 +22,10 @@
 body {
   padding: 0;
   margin: 0;
-  /* background-color: #1f2a56; */
-  background-color: black;
+  background-color: #1f2a56;
+  /* background-color: black; */
+  margin-right: 80px;
+  margin-left: 80px;
 }
 
 a {
@@ -38,7 +45,7 @@ a {
 }
 .navbar .navbar-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .navbar .navbar-container .link {
   gap: 10px;
@@ -50,6 +57,15 @@ a {
   font-family: "myFont2";
 }
 
+.titulo {
+  font-family: "titulo";
+}
+
+.dqvv {
+  color: #ff6347;
+  animation: fadeIn 8s ease-out;
+}
+
 .welcome {
   display: flex;
   flex-direction: column;
@@ -58,7 +74,7 @@ a {
   color: #B0A4A4;
 }
 .welcome img {
-  animation: fadeIn 8s ease-out;
+  animation: fadeIn 4s ease-out;
 }
 .welcome h1 {
   position: absolute;
@@ -66,7 +82,6 @@ a {
   animation: fadeIn 4s ease-out;
   text-shadow: 1px 1px 1px rgba(128, 128, 126, 0.6039215686);
   color: rgba(237, 229, 0, 0.6039215686);
-  font-family: "myFont2";
 }
 .welcome h2 {
   bottom: 46px;
@@ -112,7 +127,57 @@ a {
   transform: scaleX(-1);
 }
 
+.episodios {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.episodios h3 {
+  color: rgba(237, 229, 0, 0.6039215686);
+}
+.episodios .episodios-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual tamaño */
+  grid-template-rows: repeat(2, 1fr); /* 2 filas de igual tamaño */
+  gap: 30px;
+  /* align-items: center; */
+  /* justify-items: center; */
+  /* align-content: center */
+  place-content: center;
+}
+.episodios .episodios-container .left-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  border: solid 3px rgba(237, 229, 0, 0.6039215686);
+  border-radius: 20px;
+  width: 500px;
+  text-align: center;
+}
+.episodios .episodios-container .left-container p {
+  color: white;
+  /* font-family: 'myFont2'; */
+  font-size: 22px;
+  text-shadow: 1px 1px 1px rgba(128, 128, 126, 0.6039215686);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.episodios .episodios-container .left-container .titulo-episodio {
+  color: #f2e700;
+}
+.episodios .episodios-container .right-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.episodios .episodios-container .right-container img {
+  border-radius: 20px;
+}
+
 .integrantes {
+  margin-top: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,15 +185,24 @@ a {
 .integrantes .integrante-card {
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 60px;
   justify-content: center;
+}
+.integrantes .integrante-card .integrante {
+  border: solid 3px #f2e700;
+  border-radius: 20px;
+}
+.integrantes .integrante-card .integrante .data {
+  display: flex;
+  width: 100%;
+}
+.integrantes .integrante-card .integrante .data a {
+  text-decoration: none;
 }
 .integrantes .integrante-card .photo {
   height: 370px;
   width: 300px;
   filter: grayscale(100%);
-  border: solid 2px #B0A4A4;
-  border-radius: 20px;
 }
 .integrantes .integrante-card .photo img {
   object-fit: fill;

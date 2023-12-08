@@ -22,7 +22,7 @@ function cargarEpisodios(apiUrl) {
 
                 const episodioHTML = `
                     <div class="left-container">
-                        <h2 class="titulo-episodio">${titulo}</h2>
+                        <h2 class="titulo-episodio titulo">${titulo}</h2>
                         <p>${video.snippet.description}</p>
                     </div>
                     <div class="right-container">
