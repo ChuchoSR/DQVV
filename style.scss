@@ -23,6 +23,10 @@
     }
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     padding: 0;
     margin: 0;
@@ -56,7 +60,12 @@ a{
             
             a{
                 color: rgb(241 230 0);
-                font-family: 'myFont2';
+                transition: 0.3s;
+            }
+            a:hover{
+                color:#ff6347;
+                animation: fadeIn 0.5s ease-out;
+
             }
         }
     }
@@ -110,6 +119,7 @@ a{
 }
 
 .podcast{
+    margin-top: 200px;
     h2{
         text-align: center;
         color: #ff6347;
@@ -143,6 +153,7 @@ a{
 }
 
 .episodios{
+    margin-top: 200px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -205,11 +216,24 @@ a{
         .integrante{
             border: solid 3px #f2e700;
             border-radius: 20px;
+            color: white;
+            text-shadow: 1px 1px 1px #80807e9a;
+            p{
+                margin-left: 20px;
+            }
             .data{
+                /* font-family: 'myFont2'; */
+                color: white;
+                text-shadow: 1px 1px 1px #80807e9a;
                 display: flex;
                 width: 100%;
+                flex-direction: row;
+                margin-left: 20px;
+                justify-content: space-around;
                 a{
                     text-decoration: none;
+                    top: 15px;
+                    position: relative;
                 }
             }
         }
@@ -222,6 +246,145 @@ a{
             img{
                 object-fit: fill;
                 
+            }
+        }
+    }
+}
+
+.contacto{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        text-align: center;
+    }
+    .formulario-contacto{
+        .control-formulario{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            label{
+                margin-top: 15px;
+                color: white;
+                text-shadow: 1px 1px 1px #80807e9a;
+            }
+            }
+        input{
+            width: 457px;
+            height: 30px;
+            border-radius: 6px;
+            background-color: #1f2a56;
+            border-color: #f2e700;
+            color: white;
+            text-shadow: 1px 1px 1px #80807e9a;
+        }
+        .submit-btn{
+            margin-top: 20px;
+            width: 464px;
+            cursor: pointer;
+            height: 40px;
+        }
+        .submit-btn:hover{
+/*             background-color: #f2e700;
+            color: #ff6347; */
+            background-color: #ff6347;
+            color: #f2e700;
+            animation: fadeIn 1s ease-out;
+        }
+        textarea{
+            background-color: #1f2a56;
+            border-color: #f2e700;
+            color: white;
+            text-shadow: 1px 1px 1px #80807e9a;
+            border-radius: 6px;
+        }
+    }
+}
+footer{
+    text-align: center;
+    margin-top: 50px;
+    color: #f2e700;
+    .redes-sociales{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border: solid 2px #f2e700;
+        width: 54px;
+        height: 180px;
+        justify-content: center;
+        border-radius: 20px;
+        position: fixed;
+        left: 10px;
+        top: 360px;
+        img{
+            height: 30px;
+        }
+    }
+    .redes-sociales img:hover{
+        background-color: #ff6347;
+        border-radius: 4px;
+        transition: 0.3s;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .welcome{
+        img{
+            top: 150px;
+            position: relative;
+            width: 620px;
+        }
+        h1{
+            position: relative;
+            top: 50px;
+        }
+        h2{
+            position: relative;
+            top: 30px;
+        }
+    }
+
+
+    .podcast{
+        .logos{
+            .left, .right{
+            height: 100px;
+            position: relative;
+            top: 250px;
+            }
+        }
+    }
+}
+
+.episodios{
+    .episodios-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .left-container{
+        border: none;
+        }
+    }
+}
+
+.integrantes{
+    .integrante-card{
+        display: flex;
+        flex-direction: column;
+        .integrante{
+            height: 400px;
+            img{
+            height: 300px;
+            }
+            .data{
+                .ig-logo{
+                height: 24px;
+                width: 24px;
+                }
             }
         }
     }
