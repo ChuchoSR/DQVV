@@ -331,27 +331,26 @@ footer .redes-sociales img:hover {
     position: relative;
     top: 250px;
   }
-}
-.episodios .episodios-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.episodios .episodios-container .left-container {
-  border: none;
-}
-
-.integrantes .integrante-card {
-  display: flex;
-  flex-direction: column;
-}
-.integrantes .integrante-card .integrante {
-  height: 400px;
-}
-.integrantes .integrante-card .integrante img {
-  height: 300px;
-}
-.integrantes .integrante-card .integrante .data .ig-logo {
-  height: 24px;
-  width: 24px;
+  .episodios .episodios-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .episodios .episodios-container .left-container {
+    border: none;
+  }
+  .integrantes .integrante-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .integrantes .integrante-card .integrante {
+    height: 400px;
+  }
+  .integrantes .integrante-card .integrante img {
+    height: 300px;
+  }
+  .integrantes .integrante-card .integrante .data .ig-logo {
+    height: 24px;
+    width: 24px;
+  }
 }/*# sourceMappingURL=style.css.map */

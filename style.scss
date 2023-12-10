@@ -358,32 +358,31 @@ footer{
             }
         }
     }
-}
-
-.episodios{
-    .episodios-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .left-container{
-        border: none;
-        }
-    }
-}
-
-.integrantes{
-    .integrante-card{
+    .episodios{
+        .episodios-container{
         display: flex;
         flex-direction: column;
-        .integrante{
-            height: 400px;
-            img{
-            height: 300px;
+        align-items: center;
+        .left-container{
+            border: none;
             }
-            .data{
-                .ig-logo{
-                height: 24px;
-                width: 24px;
+        }
+    }
+    
+    .integrantes{
+        .integrante-card{
+            display: flex;
+            flex-direction: column;
+            .integrante{
+                height: 400px;
+                img{
+                height: 300px;
+                }
+                .data{
+                    .ig-logo{
+                    height: 24px;
+                    width: 24px;
+                    }
                 }
             }
         }
