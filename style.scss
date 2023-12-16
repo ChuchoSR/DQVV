@@ -23,6 +23,17 @@
     }
 }
 
+
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -39,6 +50,10 @@ a{
     text-decoration: none;
 }
 
+.show{
+    display: block;
+}
+
 .navbar{
     margin: 20px 50px 20px 50px;
 
@@ -53,6 +68,9 @@ a{
     .navbar-container{
         display: flex;
         justify-content: space-between;
+        .menu-responsive{
+            display: none;
+        }
         .link{
             gap: 10px;
             margin-top: 12px;
@@ -145,6 +163,8 @@ a{
 
         .white-logo{
             height: 150px;
+            animation: floatAnimation 3s ease-in-out infinite;
+            
         }
     }
     .right{
@@ -312,7 +332,6 @@ footer{
         display: flex;
         flex-direction: column;
         gap: 10px;
-        border: solid 2px #f2e700;
         width: 54px;
         height: 180px;
         justify-content: center;
@@ -332,6 +351,26 @@ footer{
 }
 
 @media screen and (max-width: 720px) {
+    .navbar{
+        .navbar-container{
+            position: fixed;
+            .logo-amarillo{
+                position: absolute;
+                right: 50px;
+            }
+            .link{
+                display: none;
+            }
+            .menu-responsive{
+                display: flex;
+                height: 44px;
+                position: relative;
+                top: 16px;
+                left: 480px;
+            }
+        }
+    }
+
     .welcome{
         img{
             top: 150px;
@@ -386,5 +425,69 @@ footer{
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .navbar{
+        .navbar-container{
+            .menu-responsive{
+                left: 290px;
+            }
+            .logo-amarillo{
+                width: 40px;
+                right: 100px;
+            }
+        }
+    }
+
+    .welcome{
+        img{
+            width: 450px;
+        }
+        .titulo{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+    }
+}
+.podcast{
+    position: relative;
+    top: 150px;
+    .logos{
+        .white-logo{
+            height: 40px;
+            position: relative;
+            top: 400px
+        };
+    }
+}
+
+.episodios{
+    .episodios-container{
+        .left-container{
+            width: 300px;
+        }
+    }
+}
+
+/* .contacto {
+    .formulario-contacto-contenedor {
+        width: 100%;  // Ajusta el ancho al 100% del contenedor
+        padding: 0 20px;  // Ajusta el relleno según sea necesario
+    }
+
+    .formulario-contacto {
+        width: 60%;  // Ajusta el ancho al 100%
+        padding: 20px;  // Ajusta el relleno según sea necesario
+        box-sizing: border-box;  // Incluye el relleno y el borde en el ancho total
+    }
+} */
+
+.footer{
+    .redes-sociales{
+        width: 10px;
     }
 }

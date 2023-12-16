@@ -1,0 +1,33 @@
+@mixin batAnimation($duration, $delay) {
+    animation: batAnimation $duration linear infinite $delay;
+  }
+  
+  @keyframes batAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .bat {
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: 30px; /* Ajusta el tamaño según sea necesario */
+    position: absolute;
+    top: random(80) + 10 + vh; /* Posición aleatoria en la pantalla */
+    left: -50px; /* Empieza fuera del área visible */
+    @include batAnimation(5s, 5s); /* Duración de la animación y retardo entre murciélagos */
+    z-index: 1; /* Asegura que los murciélagos estén sobre otros elementos */
+  }
+  
+  // Crear murciélagos adicionales
+  @for $i from 2 through 5 {
+    .bat:nth-child(#{$i}) {
+      @include batAnimation(5s, 5s * $i); // Ajusta el retardo para cada murciélago adicional
+    }
+  }
+  
